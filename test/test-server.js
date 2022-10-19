@@ -16,8 +16,8 @@ describe('GET /', function () {
       .reply(200, {
         "status": 200,
         "events": [
-          { id: 1, title: 'a mock event', description: 'something really cool', location: 'Chez Joe Pizza', likes: 0, datetime_added: '2022-02-01:12:00', image: '' },
-          { id: 2, title: 'another mock event', description: 'something even cooler', location: 'Chez John Pizza', likes: 0, datetime_added: '2022-02-01:12:00', image: '' },
+          { id: 1, title: 'a mock event', description: 'really cool', location: 'Chez Joe Pizza', likes: 0, datetime_added: '2022-02-01:12:00', image: '' },
+          { id: 2, title: 'another mock event', description: 'even cooler', location: 'Chez John Pizza', likes: 0, datetime_added: '2022-02-01:12:00', image: '' },
       ]
       });
 
