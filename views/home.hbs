@@ -1,0 +1,32 @@
+
+<ul >
+  {{#events}}
+    <li>
+        <h2>{{ title }}</h2>
+        {{!-- code to display images goes here --}}
+        <p>{{ description }}</p>
+        <p>Location: {{ location }}</p>
+        <p>Likes: {{ likes }}
+        <form method="POST" action="/event/like">
+        <input type="hidden" value="{{id}}" name="id">
+        <input type="submit" value="Like">
+        </form>
+        <form method="POST" action="/event/unlike">
+        <input type="hidden" value="{{id}}" name="id">
+        <input type="submit" value="UN-Like">
+        </form>
+        </p>
+    </li>
+  {{/events}}
+</ul>
+<div>
+  <h2>Add an event</h2>
+    <form action="/event" method="post" enctype="multipart/form-data">
+       title: <input name="title" type="text" /> <br />
+       description: <input name="description" type="text" /> <br />
+       location: <input name="location" type="text" /> <br />
+               {{!-- modify hidden input below for file upload --}}
+        <input type="hidden" name="image" id="image" value="" />
+        <input type="submit" name="submit" value="submit" />
+    </form>
+  </div>
